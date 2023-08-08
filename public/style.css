@@ -1,0 +1,111 @@
+#mainApp{
+    position: absolute;
+    margin: 0 auto;
+    width: 90%;
+    height: 95%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    color: #333;
+}
+
+
+#leftMenu{
+    position: absolute;
+    float: left;
+    width: 200px;
+    height: 100%;
+    background-color: #eee;
+    border-right: 1px solid #ccc;
+}
+
+#rightMenu{
+    position: absolute;
+    float: right;
+    width: calc(100% - 220px);
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    right: 0px;
+}
+
+#rightMenuHeader{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background-color: #eee;
+    border-bottom: 1px solid #ccc;
+}
+
+#rightMenuBody{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 100px;
+    bottom: 100px;
+    overflow: auto;
+}
+
+.eachConfigItem{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.configKey{
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    line-height: 50px;
+    text-align: left;
+}
+
+.configValue{
+    position: absolute;
+    width: calc(100% - 220px);
+    height: 100%;
+    left: 220px;
+    top: 0px;
+    line-height: 50px;
+    text-align: left;
+}
+
+#rightMenuFooter{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 200px;
+    /* display: none; */
+}
+
+
+
+
+#leftMenu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#leftMenu ul li{
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#leftMenu ul li:hover{
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+#leftMenu ul li.active{
+    background-color: #ddd;
+}
+
+
+div{
+    border: 1px solid #ccc;
+}
