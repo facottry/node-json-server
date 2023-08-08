@@ -1,6 +1,6 @@
 (function () {
     let serverConfig = {
-        server: 'http://localhost:3000',
+        server: 'http://16.16.215.255:3000',
         routes: {
             getConfig: '/getConfig',
             setConfig: '/setConfig',
