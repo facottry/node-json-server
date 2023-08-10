@@ -1,7 +1,7 @@
 (function () {
     let serverConfig = {
         // server: 'http://16.16.215.255:3000',
-        server: './',
+        server: '',
         routes: {
             getConfig: '/getConfig',
             setConfig: '/setConfig',
