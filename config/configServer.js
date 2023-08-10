@@ -1,15 +1,27 @@
 //create a server to listen on port 3000  it accepts a request and sends a response
 const http = require('http');
+const https = require('https')
 const fs = require('fs');
 const path = require('path');
 const hostname = 'localhost';
-const port = 3001;
+// const port = 3001;
 const express = require('express');
 const bodyParser = require('body-parser');
 
+let key = fs.readFileSync(__dirname + '/public/key.pem','utf-8');
+let cert = fs.readFileSync(__dirname + '/public/cert.pem','utf-8');
 
+const port = 8443
+const parameters = {
+  key: key,
+  cert: cert
+}
+
+//run a https server in express
 
 const app = express();
+
+
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -61,6 +73,12 @@ app.use((req, res) => {
 //     res.send(response);
 // });
 
-app.listen(port, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+// app.listen(port, () => {
+//     console.log(`Server running at http://${hostname}:${port}/`);
+// });
+
+
+let server = https.createServer(parameters,app)
+server.listen(port,()=>{
+    console.log(`Server is listening at port ${port}`)
+  });
