@@ -11,7 +11,7 @@ const bodyParser = require('body-parser');
 let key = fs.readFileSync(__dirname + '/public/key.pem','utf-8');
 let cert = fs.readFileSync(__dirname + '/public/cert.pem','utf-8');
 
-const port = 8443
+const port = 3001
 const parameters = {
   key: key,
   cert: cert
